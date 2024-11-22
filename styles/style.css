@@ -19,13 +19,68 @@
 	--color-background:#eee;
 }
 
+/****************/
+/* BODY */
+/****************/
 
-
+body{
+	margin: 0;
+}
 
 
 /****************/
-/* JOUW STYLING */
+/* HEADER */
 /****************/
 
-/* jouw code */
+header{
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 84.26px;
+}
 
+header img{
+	height: 50.18px;
+}
+
+/****************/
+/* MAIN */
+/****************/
+
+.tekst{
+	display: block;
+	flex-basis: auto;
+	flex-grow: 0;
+	flex-shrink: 1;
+	width: 50%;
+}
+
+
+.tekst h2{
+	font-size: 35.2px;
+	font-family: inter;
+}
+
+p{
+	font-size: 16px;
+	font-family: inter;
+	line-height: 18.4px;
+}
+
+main section:nth-of-type(1) {
+	background-image: url(images/background-section-1.png);	
+	background-size: cover;
+}
+
+/****************/
+/* FOOTER */
+/****************/
+
+footer{
+	background-color: black;
+}
+
+footer img{
+
+}

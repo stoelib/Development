@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+  Joost Stoelinga
 
   #### Je startniveau:
-  hier je startniveau (kies uit zwart, rood óf blauw)
+  blauw
 
   #### Je focus:
-  hier je focus (kies uit responsive óf surface plane)
+  Responsive 
  
 </details>
 
@@ -36,16 +36,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://www.nasa.gov/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  Start pagina
+  ![Screenshot nasa website](readme-images/www.nasa.gov_.png)
 
   #### Screenshot(s) van de tweede pagina (small screen):
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+  Astromaterials
+ ![Astromaterials pagina](readme-images/science.nasa.gov_astromaterials_.png)
 </details>
 
 
@@ -57,6 +56,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+
+  - Fouten in de HTML validation
+  - Enorm veel div's en Span's
+  - screen reader navigeerde niet naar behoren door de pagina
+  - er waren geen H1's aanwezig
+  - er was alt tekst aanwezig bij alle afbeeldingen elleen de tekst is niet altijd een goeie omschrijving van de afbeelding.
+  - er is GEEN dark mode
+
 
 </details>
 
