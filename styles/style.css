@@ -10,21 +10,36 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-	margin: 0;
+	--color-text-zwart:#111;
+	--color-text-wit:white;
+
+	--color-background: rgb(0, 0, 0);
+	--color-background-hoover: rgb(160,0,11);
+
+	--color-icons: white;
+	--color-icons-red: red;
+	--font-h2: "font basis";
+
+
+	
 	font-family: 'inter', sans-serif;
 }
 
-/*********************/
-/* FONT */
-/*********************/
-
-
-
 /****************/
-/* BODY */
+/*     FONT     */
+/****************/
+
+@font-face {
+	font-family: "font basis bold";
+	src: url("../fonts/PublicSans-Bold\ \(2\).woff2");
+}
+
+@font-face {
+	font-family: "font basis";
+	src: url("../fonts/PublicSans-Regular\ \(2\).woff2\ \(2\).woff2");
+}
+/****************/
+/*     BODY     */
 /****************/
 
 img{
@@ -37,7 +52,7 @@ body{
 }
 
 /****************/
-/* HEADER */
+/*    HEADER    */
 /****************/
 header h1{
 	visibility: hidden;
@@ -51,314 +66,121 @@ header h1{
 }
 
 header{
-	background-color: black;
+	min-height: 5.26em;
+	background-color: var(--color-background);
+
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
-	height: 5.26em;
+	flex-wrap: wrap;
+	
+	padding: 1em;
+
+
+	position:sticky;
+
+
+	z-index: 100000000000000;
 }
 
 header img{
-	height: 3.14em;
-}
-
-/****************/
-/* MAIN */
-/****************/
-
-p{
-	font-size: 1em;
-	font-family: inter;
-	line-height: 1.2em;
-	color: white;
+	height: 3.7em;
 }
 
 
-ul{
-	list-style: none;
+header button{
+	fill: var(--color-icons);
+	height: 1.4em;
+	width: 1.4em;
+	order: -1;
+
+	padding: 10px;
+	border: none;
+	background-color: none;
 }
 
-/* Our alien world */
-
-main section:nth-of-type(1) {
-
-/*Sanne heeft de blur toegevoegd*/
-	background-image: 
-		url(../images/background-section-1.png),
-		linear-gradient(135deg, black, transparent);
-
-	background-blend-mode: multiply;	
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+header button svg{
+	fill: var(--color-icons);
+	height: 1.4em;
+	width: 1.4em;
+	border: none;
+	background-color: none;
 }
 
-main section:nth-of-type(1) h2 {
-	font-size: 3em;
-	font-family: inter;
-	color: white;
-	margin-bottom: 0em;
+header svg{
+	height: 1em;
+	width: 1em;
+	fill: var(--color-icons);
 }
 
-main section:nth-of-type(1) div {
-	padding: 3em 1.5em;
+header nav{
+	display: none;
+	position: fixed;
+	top: 5.25em;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-background);
 	
 }
 
-main section:nth-of-type(1) div a {
-	padding: .75em 1.25em;
-	background-color: rgb(216, 57, 51);
-	color: white;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: .2em;
-	display: flex;
-	justify-content: center;
-	font-size: 18.88px;
-	font-weight: 700;
-}
-main section:nth-of-type(1) div p{
-	line-height: 23.76px;
+header nav.toonMenu{
+	display: block;
 }
 
-
-main section:nth-of-type(1) ul {
-	color: white;
+Header nav a{
+	color: var(--color-text-wit);
 }
 
-main section:nth-of-type(1) ul a {
-	color: white;
+header form{
+	color: var(--color-text-wit);
 }
 
-main section:nth-of-type(1) ul li{
-	border-top-style: solid ;
-	border-color: white;
-}
+@media (width> 45em){
+	header nav{
+		display: block;
+		position: static;
+		order: 1;
+		width: 100%;
+	}
 
-
-
-/* Featured News */
-
-main section:nth-of-type(2) h2{
-	font-size: 3em;
-	font-family: inter;
-	color: black;
-}
-
-main section:nth-of-type(2) a{
-	font-size: 1.4em;
-	font-family: inter;
-	color: black;
-	padding-left: 0em;
-	text-decoration: none;	
-	font-weight: 700;
-}
-
-
-main section:nth-of-type(2){
-	padding-top: 3em;
-	padding-left: 2em;
-	padding-bottom: 3em;
-	padding-right: 2em;
-}
-
-main section:nth-of-type(2) ul{
-	padding-left: 0em;
-	display: grid;
-
-	grid-template-rows:23.5em 23.5em 12.5em 12em;
-	gap:1em;
-
-}
-
-main section:nth-of-type(2) li{
-	position: relative;
-
-}
-
-main section:nth-of-type(2) li:nth-of-type(1)  img{
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-}
-
-main section:nth-of-type(2) li:nth-of-type(2)  img{
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-}
-
-main section:nth-of-type(2) li:nth-of-type(3)  img{
-	object-fit: cover;
-	object-position: bottom;
-	width: 100%;
-	height: 100%;
-}
-
-main section:nth-of-type(2) li:nth-of-type(4)  img{
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-}
-
-
-
-main section:nth-of-type(2) li p:nth-of-type(1){
-	position: absolute;
-	left: 3em;
-	top: 1.5em;
-	color: #eee;
-}
-
-main section:nth-of-type(2) li p:nth-of-type(2){
-	position: absolute;
-	left:2em;
-	bottom: 2em;
-	color: #eee;
-}
-
-main section:nth-of-type(2) li p:nth-of-type(3){
-	position: absolute;
-	left:2em;
-	bottom: 4em;
-	color: #eee;
-}
-
-/* Featured News 2.0 */
-
-main section:nth-of-type(3) li{
-	display: grid;
-	grid-template-columns: 1fr 2fr;
-	grid-template-rows:1fr 1fr 1fr;
-	gap: 1em;
-}
-
-main section:nth-of-type(3) li img{
-	border-radius: 50%;
-	height: 5em;
-	width: 5em;
-	object-fit: cover;
-	grid-column-start: 1 ;
-	grid-row-start: 1 ;
-	max-height: 5em;
-}
-
-main section:nth-of-type(3) li p:nth-of-type(1){
-	grid-column-start:2 ;
-	grid-row-start:3 ;
-}
-
-main section:nth-of-type(3) li p:nth-of-type(2){
-	grid-column-start:2 ;
-	grid-row-start: 2;
-}
-
-main section:nth-of-type(3) p{
-	color: black};
-
-/* Global Freshwater Decrease */
-main section:nth-of-type(4){
-	position: relative;
-	/* background-image:url(../images/sataliet-camtrails.png);
-	background-size: cover; 
-    background-position: center; */
-}
-
-main section:nth-of-type(4) p{
-	position: absolute;
-	max-width: 90vw;
-	color: white;
-	left: 1em;
-}
-
-main section:nth-of-type(4) a{
-	position: absolute;
-	color: white;
-	font-size: 1.4em;
-	text-decoration: none;
-	font-weight: 700;
-}
-
-main section:nth-of-type(4) h2{
-	position: absolute;
-	color: white;
-	font-size: 3em;
-	width: 100vw;
-	left: 1em
-}
-
-main section:nth-of-type(4) img{
-	object-fit: cover;
-	min-height: 40em;
-	max-height: 40em;
-	height: 55em;
-}
-
-/* The solar system */
-
-main section:nth-of-type(5){
-	padding-top: 48px;
-	padding-left: 24px;
-	padding-right: 24px;
-	padding-bottom: 48px;
-}
-
-main section:nth-of-type(5) img{
-	object-fit: cover;
-	max-width: 100%;
-	max-height: 100%;
-	width: 100%;
-	height: 23.4em;
-}
-
-main section:nth-of-type(5) li{
-	position: relative;
-}
-
-main section:nth-of-type(5) ul{
-	display: grid;
-	padding-left: 0;
-	gap: 2.5em;
-	grid-template-rows:23.5em 23.5em 23.5em 23.5em ;
-}
-
-main section:nth-of-type(5) li a{
-	position: absolute;
-	text-decoration: none;
-	color: white;
-	left: 1em;
-	bottom: 1em;
-	font-size: 1.4;
-	font-weight: 700;
-	line-height: 21.1px;
-}
-
-main section:nth-of-type(5) h2{
-	font-size: 3em;
-	font-family: inter;
-	color: black;
-}
-
-main section:nth-of-type(5) a{
-	font-size: 1.4em;
-	font-family: inter;
-	color: black;
-	padding-left: 0em;
-	text-decoration: none;	
-	font-weight: 700;
+	header nav ul{
+		display: flex;
+		justify-content: space-between;
+		gap: 1em;
+	}
 }
 
 /****************/
-/* FOOTER */
+/*    footer    */
 /****************/
 
 footer{
-	background-color: black;
+	background-color: var(--color-background);
 	padding-top: 3em;
 	padding-left: 2em;
 	padding-bottom: 3em;
 	padding-right: 2em;
 }
+
+footer svg{
+	fill: var(--color-icons);
+	width: 1em;
+	height: 1em;
+}
+
+footer  circle {
+	fill: var(--color-icons-red);
+}
+
+footer  a:hover circle{
+    fill: var(--color-background-hoover);    
+}
+
+footer  a:hover svg{
+    rotate: -45deg;
+}
+
 
 footer article:nth-of-type(1){
 	display: flex;
@@ -373,11 +195,11 @@ footer img{
 	margin-bottom: 1em;
 }
 
-footer h3{
+footer h2{
 	font-family: 'inter', sans-serif;
 	font-size: 1.2em;
 	font-weight: 700;
-	color: white;
+	color: var(--color-text-wit);
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
@@ -392,7 +214,7 @@ footer a{
 	font-family: inter;
 	font-size: 1em;
 	text-decoration:none;
-	color: white;
+	color: var(--color-text-wit);
 }
 
 footer a:nth-of-type(2){
@@ -412,83 +234,4 @@ footer li{
 	margin-bottom: 0.5em;
 }
 
-@media (width > 30em) {
-	main section:nth-of-type(1) div p { 
-		max-width: 50vw;
-	}
 
-	main section:nth-of-type(1) div a{
-		max-width: 50vw;
-	}
-
-}
-
-@media (width > 40em) {
-
-	main section:nth-of-type(1) div p { 
-		max-width: 40vw;
-	}
-
-	main section:nth-of-type(1) div a{
-		max-width: 30vw;
-	}
-
-	main section:nth-of-type(2) ul{ 
-		grid-template-columns:1fr 1fr;
-		grid-template-rows:60vw 30vw 30vw;
-		gap: 1em;
-	}
-
-	main section:nth-of-type(2)  li:nth-of-type(1) {
-		grid-column:span 2;
-	}
-	
-	main section:nth-of-type(2)  li:nth-of-type(2) {
-		grid-row:span 2;
-	}
-
-	main section:nth-of-type(3) ul{
-		display: grid;
-		grid-template-columns:1fr 1fr;
-		grid-template-rows:1fr 1fr;
-	}
-
-
-	main section:nth-of-type(5) ul{ 
-		grid-template-columns:1fr 1fr;
-		grid-template-rows:30vw 30vw;
-		gap: 1em;
-	}
-	
-	main section:nth-of-type(5)  li:nth-of-type(1) {
-		grid-column:span 1;
-	}
-	
-	main section:nth-of-type(5)  li:nth-of-type(2) {
-		grid-row:span 1;
-	}
-}
-
-@media (width > 60em) {
-	main section:nth-of-type(2) ul{
-		grid-template-columns:1fr 1fr 1fr 1fr;
-		grid-template-rows: 1fr 1fr ;
-	}
-
-	main section:nth-of-type(3) ul{
-		grid-template-columns:1fr 1fr 1fr 1fr;
-	}
-
-	main section:nth-of-type(5) ul{ 
-		grid-template-columns:1fr 1fr 1fr 1fr;
-		grid-template-rows:30vw;
-		gap: 1em;
-		position: relative;
-	}
-
-	main section:nth-of-type(5) a:nth-of-type(1){
-		position: absolute;
-	}
-
-	main
-}
